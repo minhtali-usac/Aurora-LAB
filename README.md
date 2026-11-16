@@ -128,13 +128,13 @@ docs/anh/             Ảnh chụp màn hình dùng trong README
 
 ## Góp ý
 
-Mọi góp ý, báo lỗi khoa học hay đề xuất bài học mới đều được hoan nghênh: mở [Issue](https://github.com/minhtali-usac/minhtali-usac.github.io/issues) hoặc viết về clb.usac@gmail.com. Với nội dung khoa học, xin kèm nguồn tham khảo để nhóm có thể kiểm chứng.
+Mọi góp ý, báo lỗi khoa học hay đề xuất bài học mới đều được hoan nghênh: mở [Issue](https://github.com/minhtali-usac/minhtali-usac.github.io/issues) hoặc gửi email tới minhvo.091003.nckh@gmail.com hoặc clb.usac@gmail.com. Với nội dung khoa học, xin kèm nguồn tham khảo để nhóm có thể kiểm chứng.
 
 ## Bản quyền
 
 © 2026 CLB Thiên văn USAC. **Giữ toàn bộ bản quyền** đối với mã nguồn, nội dung, thiết kế, hình ảnh, tên và logo CLB, linh vật Sên phi hành gia.
 
-Mã nguồn được công khai để tham khảo và minh bạch, không phải giấy phép mở. Bạn được tự do **dùng Aurora-LAB để học tập và giảng dạy**, chia sẻ đường dẫn, trích dẫn ngắn hoặc chụp màn hình kèm ghi công «Aurora-LAB – CLB Thiên văn USAC». Mọi việc sao chép, chỉnh sửa, phân phối lại mã nguồn hay nội dung đều cần sự đồng ý bằng văn bản của CLB (clb.usac@gmail.com). Chi tiết: [`LICENSE`](LICENSE).
+Mã nguồn được công khai để tham khảo và minh bạch, không phải giấy phép mở. Bạn được tự do **dùng Aurora-LAB để học tập và giảng dạy**, chia sẻ đường dẫn, trích dẫn ngắn hoặc chụp màn hình kèm ghi công «Aurora-LAB – CLB Thiên văn USAC». Mọi việc sao chép, chỉnh sửa, phân phối lại mã nguồn hay nội dung đều cần sự đồng ý bằng văn bản của CLB (liên hệ: minhvo.091003.nckh@gmail.com hoặc clb.usac@gmail.com). Chi tiết: [`LICENSE`](LICENSE).
 
 Thư viện, phông chữ, dữ liệu và ảnh của bên thứ ba giữ giấy phép gốc, xem [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md).
 
@@ -144,6 +144,6 @@ Thư viện, phông chữ, dữ liệu và ảnh của bên thứ ba giữ giấ
 
 **CLB THIÊN VĂN USAC** · LAN TỎA THIÊN VĂN ĐẾN CỘNG ĐỒNG
 
-[Fanpage](https://www.facebook.com/clbusac) · [clb.usac@gmail.com](mailto:clb.usac@gmail.com) · [web.clbtvusac.com](https://web.clbtvusac.com) · [auroralab.clbtvusac.com](https://auroralab.clbtvusac.com)
+[Fanpage](https://www.facebook.com/clbusac) · [minhvo.091003.nckh@gmail.com](mailto:minhvo.091003.nckh@gmail.com) · [clb.usac@gmail.com](mailto:clb.usac@gmail.com) · [web.clbtvusac.com](https://web.clbtvusac.com) · [auroralab.clbtvusac.com](https://auroralab.clbtvusac.com)
 
 </div>

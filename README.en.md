@@ -130,13 +130,13 @@ docs/anh/             Screenshots used in the README
 
 ## Feedback
 
-Suggestions, scientific corrections and ideas for new lessons are all welcome: open an [Issue](https://github.com/minhtali-usac/minhtali-usac.github.io/issues) or write to clb.usac@gmail.com. For scientific content, please include a reference so the team can verify it.
+Suggestions, scientific corrections and ideas for new lessons are all welcome: open an [Issue](https://github.com/minhtali-usac/minhtali-usac.github.io/issues) or email minhvo.091003.nckh@gmail.com or clb.usac@gmail.com. For scientific content, please include a reference so the team can verify it.
 
 ## Copyright
 
 © 2026 USAC Astronomy Club. **All rights reserved** for the source code, content, design, images, the club's name and logo, and the Astronaut Slug mascot.
 
-The source code is public for reference and transparency; it is not an open-source license. You are free to **use Aurora-LAB for learning and teaching**, share links, and quote briefly or take screenshots with the credit "Aurora-LAB – USAC Astronomy Club". Copying, modifying or redistributing the code or content requires the club's written permission (clb.usac@gmail.com). Details: [`LICENSE`](LICENSE).
+The source code is public for reference and transparency; it is not an open-source license. You are free to **use Aurora-LAB for learning and teaching**, share links, and quote briefly or take screenshots with the credit "Aurora-LAB – USAC Astronomy Club". Copying, modifying or redistributing the code or content requires the club's written permission (contact: minhvo.091003.nckh@gmail.com or clb.usac@gmail.com). Details: [`LICENSE`](LICENSE).
 
 Third-party libraries, fonts, data and images keep their original licenses, see [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md).
 
@@ -146,6 +146,6 @@ Third-party libraries, fonts, data and images keep their original licenses, see 
 
 **USAC ASTRONOMY CLUB** · BRINGING ASTRONOMY TO THE COMMUNITY
 
-[Facebook](https://www.facebook.com/clbusac) · [clb.usac@gmail.com](mailto:clb.usac@gmail.com) · [web.clbtvusac.com](https://web.clbtvusac.com) · [auroralab.clbtvusac.com](https://auroralab.clbtvusac.com)
+[Facebook](https://www.facebook.com/clbusac) · [minhvo.091003.nckh@gmail.com](mailto:minhvo.091003.nckh@gmail.com) · [clb.usac@gmail.com](mailto:clb.usac@gmail.com) · [web.clbtvusac.com](https://web.clbtvusac.com) · [auroralab.clbtvusac.com](https://auroralab.clbtvusac.com)
 
 </div>
