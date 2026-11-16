@@ -12,8 +12,7 @@ Pump energy into an electron, change the energy of particles raining into the up
 
 [![Try it](https://img.shields.io/badge/Try%20it-auroralab.clbtvusac.com-E4925A?style=for-the-badge)](https://auroralab.clbtvusac.com)
 
-[![Code: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
-[![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/content-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE-CONTENT.md)
+[![Copyright: USAC Astronomy Club](https://img.shields.io/badge/%C2%A9-USAC%20Astronomy%20Club-lightgrey)](LICENSE)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?logo=threedotjs&logoColor=white)
 ![KaTeX](https://img.shields.io/badge/KaTeX-329894?logo=latex&logoColor=white)
@@ -129,18 +128,17 @@ assets/js/
 docs/anh/             Screenshots used in the README
 ```
 
-## Contributing
+## Feedback
 
-Suggestions, scientific corrections and ideas for new lessons are all welcome: open an [Issue](https://github.com/minhtali-usac/minhtali-usac.github.io/issues), send a Pull Request, or write to clb.usac@gmail.com. For scientific content, please include a reference so the team can verify it.
+Suggestions, scientific corrections and ideas for new lessons are all welcome: open an [Issue](https://github.com/minhtali-usac/minhtali-usac.github.io/issues) or write to clb.usac@gmail.com. For scientific content, please include a reference so the team can verify it.
 
-## License
+## Copyright
 
-| Part | License |
-|---|---|
-| Source code | [MIT](LICENSE) |
-| Content written by the club (USACodex lessons, explanations, quizzes, exercises, documentation, screenshots) | [CC BY-NC-SA 4.0](LICENSE-CONTENT.md) |
-| USAC Astronomy Club name and logo, the Astronaut Slug mascot | All rights reserved, see [`LICENSE-CONTENT.md`](LICENSE-CONTENT.md) |
-| Third-party data, libraries and images | Original licenses, see [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md) |
+© 2026 USAC Astronomy Club. **All rights reserved** for the source code, content, design, images, the club's name and logo, and the Astronaut Slug mascot.
+
+The source code is public for reference and transparency; it is not an open-source license. You are free to **use Aurora-LAB for learning and teaching**, share links, and quote briefly or take screenshots with the credit "Aurora-LAB – USAC Astronomy Club". Copying, modifying or redistributing the code or content requires the club's written permission (clb.usac@gmail.com). Details: [`LICENSE`](LICENSE).
+
+Third-party libraries, fonts, data and images keep their original licenses, see [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md).
 
 ## Contact
 

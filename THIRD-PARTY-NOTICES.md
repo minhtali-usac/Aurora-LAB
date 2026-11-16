@@ -1,8 +1,8 @@
 # Thông báo về thành phần bên thứ ba · Third-party notices
 
-Aurora-LAB dùng dữ liệu, thư viện và hình ảnh của các nguồn dưới đây. Các thành phần này giữ nguyên giấy phép gốc; giấy phép MIT trong `LICENSE` và CC BY-NC-SA 4.0 trong `LICENSE-CONTENT.md` không áp dụng cho chúng.
+Aurora-LAB dùng dữ liệu, thư viện và hình ảnh của các nguồn dưới đây. Các thành phần này giữ nguyên giấy phép gốc; thông báo bản quyền trong `LICENSE` không áp dụng cho chúng.
 
-*Aurora-LAB uses the data, libraries and images listed below. They keep their original licenses; the MIT license in `LICENSE` and the CC BY-NC-SA 4.0 license in `LICENSE-CONTENT.md` do not apply to them.*
+*Aurora-LAB uses the data, libraries and images listed below. They keep their original licenses; the copyright notice in `LICENSE` does not apply to them.*
 
 ## Thư viện · Libraries
 

@@ -1,21 +1,65 @@
-MIT License
+Aurora-LAB
+Bản quyền © 2026 CLB Thiên văn USAC (Trường Đại học Khoa học Tự nhiên – ĐHQG-HCM).
+Copyright © 2026 USAC Astronomy Club (University of Science, VNU-HCM).
+Giữ toàn bộ bản quyền. All rights reserved.
 
-Copyright (c) 2026 CLB Thiên văn USAC
+──────────────────────────────── TIẾNG VIỆT ────────────────────────────────
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Aurora-LAB do Nhóm Dự án Giáo dục Thiên văn và Khoa học Thực nghiệm, CLB Thiên văn
+USAC phát triển. Toàn bộ mã nguồn, nội dung (bài học, lời giải thích, câu hỏi, bài
+tập, tài liệu), thiết kế giao diện, hình ảnh, ảnh chụp màn hình, tên và logo CLB
+Thiên văn USAC, cùng linh vật Sên phi hành gia (hình ảnh và mô hình 3D) thuộc quyền
+sở hữu của CLB Thiên văn USAC và được bảo hộ theo pháp luật về sở hữu trí tuệ.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Việc mã nguồn được công khai trên GitHub chỉ nhằm mục đích tham khảo và minh bạch.
+Điều đó KHÔNG cấp cho bạn bất kỳ quyền nào để sao chép, chỉnh sửa, phân phối, xuất
+bản lại, cho thuê, bán hoặc tạo sản phẩm phái sinh từ Aurora-LAB, toàn bộ hay một
+phần, khi chưa có sự đồng ý bằng văn bản của CLB Thiên văn USAC.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Bạn ĐƯỢC PHÉP, không cần xin phép:
+  1. Truy cập và sử dụng Aurora-LAB tại https://auroralab.clbtvusac.com để học tập,
+     giảng dạy, kể cả trình chiếu trong lớp học hoặc hoạt động phi lợi nhuận.
+  2. Chia sẻ đường dẫn tới Aurora-LAB.
+  3. Trích dẫn ngắn hoặc chụp màn hình để giới thiệu, nhận xét, nghiên cứu, kèm ghi
+     công «Aurora-LAB – CLB Thiên văn USAC» và đường dẫn trên.
+
+Mọi mục đích khác (dùng lại mã nguồn, đưa nội dung vào tài liệu, sản phẩm hay nền
+tảng khác, sử dụng thương mại…) xin liên hệ: clb.usac@gmail.com.
+
+Dữ liệu khoa học (bước sóng, mức năng lượng, hằng số…) là dữ kiện công khai thuộc
+các nguồn được trích dẫn. Thư viện, phông chữ, dữ liệu và ảnh của bên thứ ba giữ
+nguyên giấy phép gốc, xem THIRD-PARTY-NOTICES.md; thông báo bản quyền này không áp
+dụng cho các thành phần đó.
+
+PHẦN MỀM ĐƯỢC CUNG CẤP “NGUYÊN TRẠNG”, KHÔNG KÈM BẤT KỲ BẢO ĐẢM NÀO. CLB THIÊN VĂN
+USAC KHÔNG CHỊU TRÁCH NHIỆM VỀ BẤT KỲ THIỆT HẠI NÀO PHÁT SINH TỪ VIỆC SỬ DỤNG.
+
+───────────────────────────────── ENGLISH ──────────────────────────────────
+
+Aurora-LAB is developed by the Astronomy Education and Experimental Science Project
+Team, USAC Astronomy Club. All source code, content (lessons, explanations, quizzes,
+exercises, documentation), interface design, images, screenshots, the USAC Astronomy
+Club name and logo, and the Astronaut Slug mascot (images and 3D model) are the
+property of the USAC Astronomy Club and are protected by intellectual property law.
+
+The source code is published on GitHub for reference and transparency only. This
+does NOT grant you any right to copy, modify, distribute, republish, sublicense,
+sell or create derivative works from Aurora-LAB, in whole or in part, without the
+prior written permission of the USAC Astronomy Club.
+
+You MAY, without asking:
+  1. Access and use Aurora-LAB at https://auroralab.clbtvusac.com for learning and
+     teaching, including classroom projection and non-profit activities.
+  2. Share links to Aurora-LAB.
+  3. Quote briefly or take screenshots for introduction, review or research,
+     crediting "Aurora-LAB – USAC Astronomy Club" with the link above.
+
+For any other use (reusing the code, including the content in other materials,
+products or platforms, commercial use, …) please contact: clb.usac@gmail.com.
+
+Scientific data (wavelengths, energy levels, constants, …) are public facts from
+the cited sources. Third-party libraries, fonts, data and images keep their
+original licenses, see THIRD-PARTY-NOTICES.md; this notice does not apply to them.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. IN NO EVENT SHALL
+THE USAC ASTRONOMY CLUB BE LIABLE FOR ANY DAMAGES ARISING FROM ITS USE.
