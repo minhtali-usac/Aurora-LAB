@@ -1030,3 +1030,7 @@ body::before {
 .hbtn-codex { color: var(--text); border-color: var(--line-2); background: var(--surface); }
 .hbtn-codex:hover { border-color: var(--line-3); }
 @media (max-width: 560px) { .hbtn-codex .lbl { display: none; } }
+
+/* Khung 3D Mặt Trời: chú thích lên trên, hướng dẫn ở dưới, không chồng chữ */
+.se3d-legend { top: 50px; bottom: auto; flex-direction: column; gap: 4px; padding: 7px 10px; border-radius: 10px; background: rgba(8, 12, 22, 0.6); max-width: 190px; }
+.se3d-hint { right: 10px; padding: 6px 10px; border-radius: 10px; background: rgba(8, 12, 22, 0.6); }
