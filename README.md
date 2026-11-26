@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/img/logo-usac.png" alt="Logo CLB Thiên văn USAC" width="96">
+<img src="assets/img/logo-usac.png" alt="Logo CLB Thiên văn USAC" width="96"> <img src="assets/img/logo-stellar.png" alt="Logo nhóm dự án STELLAR" width="96">
 
 # Aurora-LAB
 
@@ -17,7 +17,7 @@ Tự tay “cấp năng lượng” cho electron, đổi năng lượng của d�
 ![Three.js](https://img.shields.io/badge/Three.js-000000?logo=threedotjs&logoColor=white)
 ![KaTeX](https://img.shields.io/badge/KaTeX-329894?logo=latex&logoColor=white)
 
-<img src="docs/anh/02-cuc-quang.jpg" alt="Aurora-LAB, thí nghiệm Cực quang: dải sáng xanh lục 557,7 nm ở độ cao khoảng 122 km" width="100%">
+<img src="docs/gioi-thieu/anh/01-tong-quan.png" alt="Aurora-LAB, thí nghiệm Cực quang: dải sáng xanh lục 557,7 nm ở độ cao khoảng 122 km" width="100%">
 
 </div>
 
@@ -25,7 +25,7 @@ Tự tay “cấp năng lượng” cho electron, đổi năng lượng của d�
 
 Hầu hết những gì loài người biết về vũ trụ đều đến từ ánh sáng. Một ngôi sao cách hàng nghìn năm ánh sáng không thể đem vào phòng thí nghiệm, nhưng ánh sáng của nó thì có thể: tách ánh sáng ấy thành quang phổ, ta đọc được ngôi sao làm từ gì, nóng bao nhiêu, đang tiến lại hay lùi xa.
 
-**Aurora-LAB** do **Nhóm Dự án Giáo dục Thiên văn và Khoa học Thực nghiệm, CLB Thiên văn USAC** (Trường ĐH Khoa học Tự nhiên – ĐHQG-HCM) phát triển, để người học tự mình hiểu cách “đọc” ánh sáng. Đây là một trang web tĩnh: không cần cài đặt, không cần đăng nhập, mở trình duyệt là dùng được.
+**Aurora-LAB** do **Nhóm Dự án Giáo dục Thiên văn và Khoa học Thực nghiệm (STELLAR), CLB Thiên văn USAC** (Trường ĐH Khoa học Tự nhiên – ĐHQG-HCM) phát triển, để người học tự mình hiểu cách “đọc” ánh sáng. Đây là một trang web tĩnh: không cần cài đặt, không cần đăng nhập, mở trình duyệt là dùng được.
 
 Ba thí nghiệm của Aurora-LAB cùng xoay quanh một ý tưởng nền tảng: **mỗi nguyên tố có một “dấu vân tay ánh sáng” riêng.**
 
@@ -52,16 +52,16 @@ Ba thí nghiệm của Aurora-LAB cùng xoay quanh một ý tưởng nền tản
 
 | Nguyên tử phát photon | Ngọn lửa qua kính phân quang |
 |---|---|
-| ![Nguyên tử hydrogen: electron rơi từ n = 2 về n = 1, phát photon Lyman α 121,6 nm](docs/anh/01-nguyen-tu.jpg) | ![Strontium qua kính phân quang: vạch 460,7 nm của nguyên tử, dải SrOH và SrCl](docs/anh/04-kinh-phan-quang.jpg) |
+| ![Nguyên tử hydrogen: electron nhận 12,09 eV, nhảy từ n = 1 lên n = 3](docs/gioi-thieu/anh/02-nguyen-tu.png) | ![Strontium qua kính phân quang: vạch 460,7 nm của nguyên tử, dải SrOH và SrCl](docs/gioi-thieu/anh/06-kinh-phan-quang.png) |
 | **Mặt Trời, gió Mặt Trời và từ quyển (3D)** | **USACodex** |
-| ![Chế độ 3D: gió Mặt Trời vòng qua sóng xung kích và từ quyển Trái Đất](docs/anh/03-mat-troi-3d.jpg) | ![USACodex: bài Trạng thái giả bền và dập tắt do va chạm](docs/anh/05-usacodex.jpg) |
+| ![Chế độ 3D: gió Mặt Trời vòng qua sóng xung kích và từ quyển Trái Đất](docs/gioi-thieu/anh/04-mat-troi-3d.png) | ![USACodex: bài Trạng thái giả bền và dập tắt do va chạm](docs/gioi-thieu/anh/08-usacodex.png) |
 
 <details>
 <summary>Xem thêm ảnh</summary>
 
-| Tìm hiểu chuyên sâu | Sên phi hành gia |
+| Tìm hiểu chuyên sâu | Sóng điện từ 3D |
 |---|---|
-| ![Mục Hiểu lầm thường gặp và Tìm hiểu chuyên sâu](docs/anh/06-chuyen-sau.jpg) | ![Sên phi hành gia và menu người đồng hành](docs/anh/07-sen-phi-hanh-gia.jpg) |
+| ![Mục Hiểu lầm thường gặp và Tìm hiểu chuyên sâu](docs/gioi-thieu/anh/09-chuyen-sau.png) | ![Sóng điện từ 3D trong bài học đầu tiên](docs/gioi-thieu/anh/10-song-dien-tu-3d.png) |
 
 </details>
 
@@ -106,6 +106,8 @@ Mở <http://localhost:8765>. Cần kết nối mạng để tải phông chữ,
 ## Cấu trúc mã nguồn
 
 ```
+en/                   Bản tiếng Anh, TỰ SINH bởi tools/build-en.mjs (đừng sửa tay)
+tools/                Từ điển dịch (en.json) và script sinh bản tiếng Anh
 index.html            Khung trang, các hộp thoại (USACodex, Trợ giúp, Giới thiệu, Kiểm tra nhanh)
 assets/css/style.css  Toàn bộ giao diện
 assets/js/
@@ -123,12 +125,16 @@ assets/js/
   buddy.js          Sên phi hành gia: menu, phản ứng theo ngữ cảnh, di chuyển
   mascot3d.js       Mô hình 3D của Sên phi hành gia
   fx.js             Hiệu ứng pháo giấy khi hoàn thành thử thách
-docs/anh/             Ảnh chụp màn hình dùng trong README
+docs/gioi-thieu/      Ảnh chụp màn hình dùng trong README
 ```
 
 ## Góp ý
 
 Mọi góp ý, báo lỗi khoa học hay đề xuất bài học mới đều được hoan nghênh: mở [Issue](https://github.com/minhtali-usac/minhtali-usac.github.io/issues) hoặc gửi email tới minhvo.091003.nckh@gmail.com hoặc clb.usac@gmail.com. Với nội dung khoa học, xin kèm nguồn tham khảo để nhóm có thể kiểm chứng.
+
+## Tài trợ, hợp tác
+
+Aurora-LAB miễn phí cho mọi người học. Xem cách ủng hộ và liên hệ tài trợ, hợp tác tại [`DONATE.md`](DONATE.md).
 
 ## Bản quyền
 
@@ -144,6 +150,6 @@ Thư viện, phông chữ, dữ liệu và ảnh của bên thứ ba giữ giấ
 
 **CLB THIÊN VĂN USAC** · LAN TỎA THIÊN VĂN ĐẾN CỘNG ĐỒNG
 
-[Fanpage](https://www.facebook.com/clbusac) · [minhvo.091003.nckh@gmail.com](mailto:minhvo.091003.nckh@gmail.com) · [clb.usac@gmail.com](mailto:clb.usac@gmail.com) · [web.clbtvusac.com](https://web.clbtvusac.com) · [auroralab.clbtvusac.com](https://auroralab.clbtvusac.com)
+[Fanpage](https://www.facebook.com/clbusac) · [minhvo.091003.nckh@gmail.com](mailto:minhvo.091003.nckh@gmail.com) · [clb.usac@gmail.com](mailto:clb.usac@gmail.com) · [web.clbtvusac.com](https://web.clbtvusac.com) · [auroralab.clbtvusac.com](https://auroralab.clbtvusac.com) · [Bản tiếng Anh](https://auroralab.clbtvusac.com/en/)
 
 </div>

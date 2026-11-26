@@ -127,7 +127,7 @@
   function follow() {
     const m = $('#mascot'), b = $('#mascot-bubble'), home = document.body;
     const place = () => {
-      const open = [...document.querySelectorAll('dialog[open]')].pop();
+      const open = [...document.querySelectorAll('dialog[open]:not(#dlg-donate)')].pop(); // cửa sổ Tài trợ để thoáng, Sên đứng ngoài
       const host = open || home;
       if (m.parentElement !== host) { host.append(m); if (menu) host.append(menu); }
       m.classList.toggle('in-dialog', !!open);

@@ -685,7 +685,7 @@
   };
   AU.peek = function () {
     const ui = AL.ui;
-    const s = ui.slider({ value: this.s, label: 'Năng lượng hạt', valueText: this.eTxt(),
+    const s = ui.slider({ value: this.s, label: 'Năng lượng electron', valueText: this.eTxt(),
       onInput: (v) => { this.setE(v); this.afterChange(); } });
     s.classList.add('compact');
     this.peekSlider = s;

@@ -78,7 +78,7 @@ export function create(host, getState) {
   const sunGlow = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
   sunGlow.scale.set(26, 26, 1); sun.add(sunGlow);
   const sunLight = new THREE.PointLight(0xffffff, 3.2, 0, 0); scene.add(sunLight); // ánh sáng tỏa từ Mặt Trời
-  scene.add(new THREE.AmbientLight(0x404a66, 0.35));
+  scene.add(new THREE.AmbientLight(0x5a6688, 0.9)); // đủ sáng để thấy cả phía ban đêm của Trái Đất
 
   // ---- Trái Đất (nghiêng trục ~23,4°) ----
   const earthTilt = new THREE.Group(); sys.add(earthTilt);

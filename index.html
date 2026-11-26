@@ -27,6 +27,7 @@
   <header class="hdr">
     <a class="brand" href="./" aria-label="Aurora-LAB, CLB Thiên văn USAC">
       <img class="brand-logo" src="assets/img/logo-usac.png" alt="Logo CLB Thiên văn USAC" width="44" height="44">
+      <img class="brand-logo brand-logo-group" src="assets/img/logo-stellar.png" alt="Logo nhóm dự án STELLAR" width="44" height="44">
       <span class="brand-text">
         <span class="brand-club">CLB Thiên văn USAC</span>
         <span class="brand-name">Aurora-<em>LAB</em><span class="brand-sub">Phát xạ &amp; Cực quang</span></span>
@@ -37,6 +38,7 @@
         <button type="button" role="radio" data-mode="basic" aria-checked="true" title="Thí nghiệm cùng các thao tác chính">Cơ bản</button>
         <button type="button" role="radio" data-mode="full" aria-checked="false" title="Bổ sung số liệu, bảng chuyển mức và biểu đồ">Đầy đủ</button>
       </div>
+      <a class="hbtn lang-btn" id="lang-btn" href="en/" lang="en" hreflang="en" title="Switch to English" aria-label="English version">EN</a>
       <button type="button" class="hbtn hbtn-codex" data-action="codex" title="Thư viện mô phỏng khái niệm, dữ liệu và bài tập">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2Zm0 0A2 2 0 0 0 6 22h13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 7h6M9 11h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           <span class="lbl">USACodex</span>
@@ -54,8 +56,12 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.2" fill="currentColor"/></svg>
           <span class="lbl">Giới thiệu</span>
         </button>
+        <button type="button" class="hbtn" data-action="donate" title="Tài trợ, ủng hộ dự án">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.200a4.2 4.2 0 0 1 7.5 2.6C19.5 15.400 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <span class="lbl">Tài trợ dự án</span>
+        </button>
       </nav>
-      <button type="button" class="hbtn menu-btn" id="menu-btn" title="Đặt lại · Trợ giúp · Giới thiệu" aria-label="Thêm: đặt lại, trợ giúp, giới thiệu" aria-expanded="false" aria-controls="hdr-menu">
+      <button type="button" class="hbtn menu-btn" id="menu-btn" title="Đặt lại · Trợ giúp · Giới thiệu · Tài trợ" aria-label="Thêm: đặt lại, trợ giúp, giới thiệu, tài trợ" aria-expanded="false" aria-controls="hdr-menu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.8" fill="currentColor"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/><circle cx="19" cy="12" r="1.8" fill="currentColor"/></svg>
       </button>
     </div>
@@ -120,6 +126,8 @@
     <a href="https://www.facebook.com/clbusac" target="_blank" rel="noopener">Fanpage</a>
     <span class="dot">·</span>
     <a href="https://web.clbtvusac.com/" target="_blank" rel="noopener">web.clbtvusac.com</a>
+    <span class="dot">·</span>
+    <button type="button" class="ftr-donate" data-action="donate">♥ Tài trợ dự án</button>
   </footer>
 </div>
 
@@ -365,6 +373,23 @@
         <li>Website: <a href="https://web.clbtvusac.com/" target="_blank" rel="noopener">web.clbtvusac.com</a></li>
       </ul>
     </div>
+  </div>
+</dialog>
+
+<!-- ===== Tài trợ ===== -->
+<dialog class="modal modal-donate" id="dlg-donate" aria-labelledby="donate-title">
+  <div class="modal-head"><h2 id="donate-title">Tài trợ, ủng hộ Aurora-LAB</h2><button type="button" class="icon-btn" data-close aria-label="Đóng">✕</button></div>
+  <div class="modal-body">
+    <p>Aurora-LAB miễn phí và luôn mở cho mọi người học. Nếu thấy dự án hữu ích, bạn có thể ủng hộ để duy trì tên miền và tiếp tục phát triển.</p>
+    <div class="warn"><b>Lưu ý:</b> khoản ủng hộ được chuyển vào <b>tài khoản cá nhân của người duy trì dự án</b>, không phải quỹ của CLB Thiên văn USAC. Ủng hộ là hoàn toàn tự nguyện và không kèm theo quyền lợi hay dịch vụ nào.</div>
+    <img class="donate-qr" src="docs/donate/vietqr.png" alt="Mã VietQR Techcombank ủng hộ dự án" width="260">
+    <p class="muted donate-note">Mở app ngân hàng, quét mã và kiểm tra tên người nhận trước khi chuyển.</p>
+    <h3>Hợp tác, tài trợ cho dự án</h3>
+    <p>Đơn vị, tổ chức muốn tài trợ hoặc hợp tác (kể cả từ ngoài Việt Nam), xin liên hệ:</p>
+    <ul class="facts">
+      <li>Người duy trì dự án: <a href="mailto:minhvo.091003.nckh@gmail.com">minhvo.091003.nckh@gmail.com</a> · <a href="https://www.facebook.com/minhtalichemistryhcmus" target="_blank" rel="noopener">Facebook</a></li>
+      <li>CLB Thiên văn USAC: <a href="mailto:clb.usac@gmail.com">clb.usac@gmail.com</a> · <a href="https://www.facebook.com/clbusac" target="_blank" rel="noopener">Fanpage</a></li>
+    </ul>
   </div>
 </dialog>
 

@@ -293,21 +293,20 @@
       c.font = `500 10.5px ${BODY}`; c.fillStyle = 'rgba(190,200,215,.35)'; c.fillText('Kéo lăng kính vào tia sáng để tách màu', (s.x0 + s.x1) / 2, (gy0 + ly1) / 2 + 10);
     } else {
       // ② đồ thị cường độ: tổng các đỉnh Gauss (vạch hẹp ~1,6 nm; dải phân tử theo bề rộng thật)
-      const pts = [], step = 2; let max = 0.6;
+      const pts = [], step = 0.5; let max = 0.6;
       for (let x = X(380); x <= X(780); x += step) {
         const nm = 380 + ((x - X(380)) / (X(780) - X(380))) * 400;
         let I = 0;
         for (const l of lines) { const sg = l.w ? l.w / 2.355 : 1.6; I += l.I * Math.exp(-((nm - l.nm) ** 2) / (2 * sg * sg)); }
-        pts.push([x, nm, I]); if (I > max) max = I;
+        pts.push([x, I]); if (I > max) max = I;
       }
       const gh = gy1 - gy0, yI = (I) => gy1 - (Math.min(I, max) / max) * gh * 0.9 * p;
-      for (const [x, nm, I] of pts) {
-        if (I < 0.004) continue;
-        c.fillStyle = AL.rgba(AL.nmRGB(nm), 0.55 * AL.nmVis(nm) + 0.15);
-        c.fillRect(x, yI(I), step + 0.5, gy1 - yI(I));
-      }
-      c.strokeStyle = 'rgba(255,255,255,.85)'; c.lineWidth = 1.2; c.beginPath();
-      pts.forEach(([x, , I], i) => (i ? c.lineTo(x, yI(I)) : c.moveTo(x, yI(I)))); c.stroke();
+      // tô đúng phần diện tích dưới đường cong (cùng một đường đi với nét trắng nên không lệch nhau), màu theo bước sóng
+      const tone = c.createLinearGradient(X(380), 0, X(780), 0);
+      for (let nm = 380; nm <= 780; nm += 10) tone.addColorStop((nm - 380) / 400, AL.rgba(AL.nmRGB(nm), 0.55 * AL.nmVis(nm) + 0.15));
+      const curve = () => pts.forEach(([x, I], i) => (i ? c.lineTo(x, yI(I)) : c.moveTo(x, yI(I))));
+      c.fillStyle = tone; c.beginPath(); curve(); c.lineTo(X(780), gy1); c.lineTo(X(380), gy1); c.closePath(); c.fill();
+      c.strokeStyle = 'rgba(255,255,255,.85)'; c.lineWidth = 1.2; c.lineJoin = 'round'; c.beginPath(); curve(); c.stroke();
       c.fillStyle = 'rgba(255,255,255,.1)'; c.fillRect(s.x0 + pad, gy1, W - pad * 2, 1);
       c.font = `500 9px ${MONO}`; c.textAlign = 'left'; c.textBaseline = 'top'; c.fillStyle = 'rgba(170,180,195,.6)';
       c.fillText('cường độ I(λ)', s.x0 + pad, gy0);
@@ -336,10 +335,16 @@
       if (this.opt.names && p > 0.6) {
         const placed = [];
         lines.filter((l) => l.I > 0.25).sort((a, b) => b.I - a.I).slice(0, small ? 3 : 5).forEach((l) => {
-          const x = X(l.nm); if (placed.some((q) => Math.abs(q - x) < 54)) return; placed.push(x);
+          const x = X(l.nm);
           const info = D.line(l.id) || {}, mol = info.mol;
           const who = this.myst ? (mol ? 'dải phân tử' : 'vạch nguyên tử') : (mol ? mol + ' (phân tử)' : ((D.sp(info.sp) || {}).sym || '') + ' (nguyên tử)');
-          c.textAlign = x > s.x1 - 70 ? 'right' : x < s.x0 + 70 ? 'left' : 'center'; c.textBaseline = 'top';
+          const align = x > s.x1 - 70 ? 'right' : x < s.x0 + 70 ? 'left' : 'center';
+          // bỏ nhãn nếu chữ của nó đè lên nhãn của vạch mạnh hơn (đo theo bề rộng thật, vì mỗi ngôn ngữ dài ngắn khác nhau)
+          c.font = `500 9.5px ${BODY}`;
+          const tw = Math.max(c.measureText(who).width, 52), left = align === 'right' ? x - tw : align === 'left' ? x : x - tw / 2;
+          if (placed.some(([a, b]) => left < b + 6 && left + tw > a - 6)) return;
+          placed.push([left, left + tw]);
+          c.textAlign = align; c.textBaseline = 'top';
           c.font = `700 10.5px ${MONO}`; c.fillStyle = '#fff'; c.fillText(fmt(l.nm, l.w ? 0 : 1) + ' nm', x, ly0 + 4);
           c.font = `500 9.5px ${BODY}`; c.fillStyle = mol ? '#ffcf8a' : '#a9e7ff'; c.fillText(who, x, ly0 + 18);
           if (!small) { c.font = `500 9.5px ${MONO}`; c.fillStyle = 'rgba(200,210,225,.65)'; c.fillText(fmt(AL.eV(l.nm), 2) + ' eV', x, ly0 + 31); }

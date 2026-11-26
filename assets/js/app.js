@@ -379,6 +379,7 @@
       } else if (a === 'codex') app.openCodex();
       else if (a === 'help') $('#dlg-help').showModal();
       else if (a === 'about') $('#dlg-about').showModal();
+      else if (a === 'donate') $('#dlg-donate').showModal();
     }));
     $('#menu-btn').addEventListener('click', (e) => {
       e.stopPropagation();
@@ -390,6 +391,10 @@
     document.querySelectorAll('dialog').forEach((d) => {
       d.addEventListener('click', (e) => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
     });
+
+    // Đổi ngôn ngữ: giữ nguyên thí nghiệm đang xem
+    const lang = $('#lang-btn');
+    if (lang) lang.addEventListener('click', () => { lang.href = lang.getAttribute('href').split('#')[0] + location.hash; });
 
     // Linh vật: bấm để nhận mẹo
     $('#mascot').addEventListener('click', () => { const t = D.tips[store.state.tab]; mascotSay(t[tipIx++ % t.length]); });

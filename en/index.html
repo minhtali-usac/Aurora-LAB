@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aurora-LAB · Emission and the Aurora | USAC Astronomy Club</title>
+<meta name="description" content="Aurora-LAB, the USAC Astronomy Club's virtual laboratory on emission spectroscopy and the aurora: electrons change energy levels and emit photons, auroral colours by altitude, flame tests and the spectroscope.">
+<meta name="theme-color" content="#040509">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aurora-LAB · Emission and the Aurora">
+<meta property="og:description" content="The USAC Astronomy Club's virtual lab: atoms emitting photons, the aurora by altitude, flames and the spectroscope.">
+<meta property="og:image" content="https://auroralab.clbtvusac.com/og-logo.png">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="mode-basic">
+<div class="app" id="app">
+
+  <!-- ===== Header cố định (hệ nhận diện USAC) ===== -->
+  <header class="hdr">
+    <a class="brand" href="./" aria-label="Aurora-LAB, USAC Astronomy Club">
+      <img class="brand-logo" src="../assets/img/logo-usac.png" alt="USAC Astronomy Club logo" width="44" height="44">
+      <img class="brand-logo brand-logo-group" src="../assets/img/logo-stellar.png" alt="STELLAR research group logo" width="44" height="44">
+      <span class="brand-text">
+        <span class="brand-club">USAC Astronomy Club</span>
+        <span class="brand-name">Aurora-<em>LAB</em><span class="brand-sub">Emission &amp; the Aurora</span></span>
+      </span>
+    </a>
+    <div class="hdr-actions">
+      <div class="seg mode-toggle" role="radiogroup" aria-label="Display mode">
+        <button type="button" role="radio" data-mode="basic" aria-checked="true" title="The experiment with its main controls">Basic</button>
+        <button type="button" role="radio" data-mode="full" aria-checked="false" title="Adds numbers, transition tables and plots">Full</button>
+      </div>
+      <a class="hbtn lang-btn" id="lang-btn" href="../" lang="vi" hreflang="vi" title="Chuyển sang tiếng Việt" aria-label="Tiếng Việt">VI</a>
+      <button type="button" class="hbtn hbtn-codex" data-action="codex" title="Concept simulations, data and exercises">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2Zm0 0A2 2 0 0 0 6 22h13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 7h6M9 11h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="lbl">USACodex</span>
+        </button>
+      <nav class="hdr-menu" id="hdr-menu" aria-label="Tools">
+        <button type="button" class="hbtn" data-action="reset" title="Reset the laboratory">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 3v5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="lbl">Reset</span>
+        </button>
+        <button type="button" class="hbtn" data-action="help" title="How to use (press ?)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.3 9.2a2.8 2.8 0 0 1 5.4 1c0 1.9-2.7 2.4-2.7 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17.6" r="1.2" fill="currentColor"/></svg>
+          <span class="lbl">Help</span>
+        </button>
+        <button type="button" class="hbtn" data-action="about" title="About Aurora-LAB">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.2" fill="currentColor"/></svg>
+          <span class="lbl">About</span>
+        </button>
+        <button type="button" class="hbtn" data-action="donate" title="Sponsor or support the project">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.200a4.2 4.2 0 0 1 7.5 2.6C19.5 15.400 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <span class="lbl">Support us</span>
+        </button>
+      </nav>
+      <button type="button" class="hbtn menu-btn" id="menu-btn" title="Reset · Help · About · Support" aria-label="More: reset, help, about, support" aria-expanded="false" aria-controls="hdr-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.8" fill="currentColor"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/><circle cx="19" cy="12" r="1.8" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Tab mô phỏng ===== -->
+  <div class="tabs" role="tablist" aria-label="Experiments">
+    <button type="button" class="tab" role="tab" id="tab-atom" data-tab="atom" aria-controls="stage" aria-selected="true">
+      <span class="tab-num">1</span><span class="tab-label"><span class="tab-title">Atom</span><span class="tab-sub">emits photons</span></span>
+    </button>
+    <button type="button" class="tab" role="tab" id="tab-aurora" data-tab="aurora" aria-controls="stage" aria-selected="false">
+      <span class="tab-num">2</span><span class="tab-label"><span class="tab-title">Aurora</span><span class="tab-sub">by altitude</span></span>
+    </button>
+    <button type="button" class="tab" role="tab" id="tab-flame" data-tab="flame" aria-controls="stage" aria-selected="false">
+      <span class="tab-num">3</span><span class="tab-label"><span class="tab-title">Flame</span><span class="tab-sub">→ spectroscope</span></span>
+    </button>
+    <div class="tabs-aside">
+      <button type="button" class="challenge" id="challenge" aria-live="polite"></button>
+    </div>
+  </div>
+
+  <!-- ===== Phòng thí nghiệm ===== -->
+  <main class="lab">
+    <section class="stage" id="stage" role="tabpanel" aria-labelledby="tab-atom">
+      <div class="canvas-wrap" id="canvas-wrap">
+        <canvas id="sim" role="img" aria-label="Simulation"></canvas>
+        <div class="stage-q" aria-hidden="true"><span class="stage-q-k">Question</span><span id="stage-q"></span></div>
+      </div>
+      <div class="statusbar">
+        <div class="readout" id="readout" aria-live="polite"></div>
+        <div class="hint" id="hint"></div>
+      </div>
+    </section>
+
+    <aside class="panel" id="panel" aria-label="Control panel">
+      <div class="sheet-peek" id="sheet-peek">
+        <button type="button" class="sheet-handle" id="sheet-handle" aria-label="Expand the control panel" aria-expanded="false"><span></span></button>
+        <div class="peek-body" id="peek-body"></div>
+      </div>
+      <div class="panel-body" id="panel-body"></div>
+    </aside>
+  </main>
+
+  <!-- ===== Thanh phổ dùng chung ===== -->
+  <section class="specbar" aria-label="Spectrum bar from 380 to 780 nanometres">
+    <div class="specbar-head">
+      <span class="specbar-title">Spectrum <b>380 – 780 nm</b></span>
+      <span class="specbar-legend"><i class="lg-uv"></i>ultraviolet · visible · infrared<i class="lg-ir"></i></span>
+      <span class="specbar-hint">Hover or tap a line for details</span>
+    </div>
+    <div class="spec-wrap">
+      <canvas id="spec" aria-hidden="true"></canvas>
+      <div class="spec-tip" id="spec-tip" role="tooltip" hidden></div>
+    </div>
+  </section>
+
+  <footer class="ftr">
+    <span class="ftr-slogan">USAC Astronomy Club · Bringing astronomy to the community</span>
+    <span class="dot">·</span>
+    <a href="mailto:clb.usac@gmail.com">clb.usac@gmail.com</a>
+    <span class="dot">·</span>
+    <a href="https://www.facebook.com/clbusac" target="_blank" rel="noopener">Fanpage</a>
+    <span class="dot">·</span>
+    <a href="https://web.clbtvusac.com/" target="_blank" rel="noopener">web.clbtvusac.com</a>
+    <span class="dot">·</span>
+    <button type="button" class="ftr-donate" data-action="donate">♥ Support us</button>
+  </footer>
+</div>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<button type="button" class="mascot" id="mascot" aria-label="Astronaut Slug mascot: click for a tip">
+  <img class="mascot-img" src="../assets/img/mascot.png" alt="" width="72" height="72">
+  <span class="mascot-bubble" id="mascot-bubble" role="status"></span>
+</button>
+
+<div class="term-tip" id="term-tip" role="tooltip" hidden></div>
+
+<!-- ===== USACodex: thư viện mô phỏng khái niệm ===== -->
+<dialog class="drawer codex" id="codex" aria-labelledby="codex-title">
+  <div class="drawer-head">
+    <div class="cx-brand">
+      <img class="cx-mascot" src="../assets/img/mascot.png" alt="" width="48" height="48">
+      <div>
+        <div class="eyebrow">USACodex · Aurora-LAB</div>
+        <h2 id="codex-title">Concept simulation library</h2>
+      </div>
+    </div>
+    <button type="button" class="icon-btn" data-close aria-label="Close">✕</button>
+  </div>
+  <div class="cx-tabs" role="tablist" aria-label="USACodex">
+    <button type="button" role="tab" data-pane="sims" aria-selected="true">Concept simulations</button>
+    <button type="button" role="tab" data-pane="data" aria-selected="false">Spectral line data</button>
+    <button type="button" role="tab" data-pane="ex" aria-selected="false">Exercises</button>
+    <button type="button" role="tab" data-pane="ref" aria-selected="false">Applications &amp; references</button>
+  </div>
+
+  <div class="cx-pane cx-sims" data-pane="sims">
+    <nav class="cx-list" id="cx-list" aria-label="List of concepts"></nav>
+    <article class="cx-view" id="cx-view">
+      <header class="cx-head">
+        <span class="cx-num" id="cx-num"></span>
+        <h3 id="cx-title"></h3>
+        <p class="cx-q" id="cx-q"></p>
+      </header>
+      <div class="cx-stage" id="cx-stage"><canvas id="cx-canvas" role="img"></canvas></div>
+      <div class="cx-controls" id="cx-controls"></div>
+      <section class="cx-try" id="cx-try" aria-labelledby="cx-try-h">
+        <h4 id="cx-try-h"><span aria-hidden="true">🧪</span> Try it with the simulation</h4>
+        <ol id="cx-try-list"></ol>
+      </section>
+      <div class="cx-body">
+        <div class="cx-text" id="cx-text"></div>
+        <aside class="cx-side">
+          <div class="cx-key"><b>Key idea</b><span id="cx-key"></span></div>
+          <div class="cx-src">
+            <b>Sources</b>
+            <ul class="refs refs-short" id="cx-refs"></ul>
+            <button type="button" class="link-btn" data-goref>See all references →</button>
+          </div>
+        </aside>
+      </div>
+      <section class="cx-myth" id="cx-myth" aria-label="Common misconception"></section>
+      <details class="cx-deep" id="cx-deep">
+        <summary>
+          <span class="cxd-ic" aria-hidden="true">🔭</span>
+          <span class="cxd-t"><b>Deep dive</b><small id="cx-deep-sub">For readers who want more detail</small></span>
+          <span class="cxd-arrow" aria-hidden="true">▾</span>
+        </summary>
+        <nav class="cxd-toc" id="cx-deep-toc" aria-label="Deep dive contents"></nav>
+        <div class="cxd-body" id="cx-deep-body"></div>
+      </details>
+      <footer class="cx-foot">
+        <button type="button" class="btn-ghost" id="cx-prev">← Previous</button>
+        <button type="button" class="btn-lab" id="cx-lab"></button>
+        <button type="button" class="btn-ghost" id="cx-next">Next →</button>
+      </footer>
+    </article>
+  </div>
+
+  <div class="cx-pane drawer-body" data-pane="data" hidden>
+    <section>
+      <h3>Spectral line data</h3>
+      <p class="muted">Atomic lines follow the NIST Atomic Spectra Database (Kramida et al., 2024), with wavelengths measured in air; lines below 200 nm are vacuum wavelengths. For molecular bands the table gives the band peak after Gaydon (1974). Click a column header to sort.</p>
+      <div class="calc">
+        <label for="calc-nm">Photon energy from wavelength λ</label>
+        <div class="calc-row"><input type="number" id="calc-nm" value="557.7" min="50" max="5000" step="0.1" inputmode="decimal"><span>nm</span></div>
+        <output id="calc-out" for="calc-nm"></output>
+      </div>
+      <p class="muted small">Constants from CODATA 2018 (Tiesinga et al., 2021).</p>
+      <div class="const-grid">
+        <div><b>$h$</b><span>Planck constant</span><span class="cv">$6.626 \times 10^{-34}\ \mathrm{J\cdot s}$</span></div>
+        <div><b>$c$</b><span>Speed of light</span><span class="cv">$2.998 \times 10^{8}\ \mathrm{m/s}$</span></div>
+        <div><b>$1\ \mathrm{eV}$</b><span>Electronvolt</span><span class="cv">$1.602 \times 10^{-19}\ \mathrm{J}$</span></div>
+        <div><b>$hc$</b><span>Product $h \cdot c$</span><span class="cv">$1239.84\ \mathrm{eV\cdot nm}$</span></div>
+      </div>
+      <div class="table-wrap"><table class="data" id="codex-table"></table></div>
+    </section>
+  </div>
+
+  <div class="cx-pane drawer-body" data-pane="ex" hidden>
+    <section>
+      <h3>Exercises</h3>
+      <p class="muted">Try each one yourself before opening the answer. Handy rule: $\lambda\,(\mathrm{nm}) \approx \dfrac{1240}{\Delta E\,(\mathrm{eV})}$.</p>
+      <ol class="ex">
+        <li>Find the photon energy (eV) of the Hβ line, λ = 486.1 nm.
+          <details><summary>Show answer</summary><p>$$\Delta E = \frac{hc}{\lambda} \approx \frac{1240}{486.1} \approx \mathbf{2.55\ eV}$$</p></details></li>
+        <li>An electron in a hydrogen atom drops from n = 5 to n = 2. Find the wavelength of the emitted photon.
+          <details><summary>Show answer</summary><p>$$\Delta E = 13.6 \left(\frac{1}{2^2} - \frac{1}{5^2}\right) = 13.6 \times 0.21 \approx 2.856\ \mathrm{eV}$$ $$\lambda \approx \frac{1240}{2.856} \approx \mathbf{434\ nm}$$ (the Hγ line, violet-blue).</p></details></li>
+        <li>A photon has an energy of 2.9 eV. What colour is it, and which auroral species could emit it?
+          <details><summary>Show answer</summary><p>$$\lambda \approx \frac{1240}{2.9} \approx \mathbf{428\ nm}$$ violet-blue, matching the 427.8 nm band of the N₂⁺ ion low in the atmosphere (about 90–110 km).</p></details></li>
+        <li>Explain why the 630 nm red line of oxygen hardly appears at an altitude of 100 km.
+          <details><summary>Show answer</summary><p>The ¹D state has to “wait” about 110 s before radiating. At 100 km the air is thousands of times denser than at 250 km, so during that time the atom almost certainly collides with N₂ or O₂ and loses its energy without emitting light (collisional quenching).</p></details></li>
+        <li>An unknown salt gives a red flame. Through the spectroscope you see a broad red band at 640–690 nm and a blue line at 460.7 nm. Which metal is in the sample?
+          <details><summary>Show answer</summary><p><b>Strontium</b>. Lithium also gives a red flame, but only one narrow line at 670.8 nm and no blue line at 460.7 nm.</p></details></li>
+        <li>The solar spectrum has a dark line at 589 nm. What does it tell us?
+          <details><summary>Show answer</summary><p>It is an absorption line of <b>sodium</b>: cooler gas in the Sun's outer layers contains Na atoms that absorb exactly the 589 nm photons (the same position as sodium's D emission line).</p></details></li>
+      </ol>
+    </section>
+  </div>
+
+  <div class="cx-pane drawer-body" data-pane="ref" hidden>
+    <section>
+      <h3>What is emission spectroscopy used for?</h3>
+      <p class="muted">One idea (every element emits and absorbs its own colours) is used every day, from observatories to laboratories and street lamps.</p>
+      <div class="app-grid">
+
+        <article class="app-card">
+          <figure class="app-fig">
+            <div class="app-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fraunhofer_lines.svg?width=800" alt="The solar spectrum with dark Fraunhofer lines" loading="lazy" referrerpolicy="no-referrer" class="contain"></div>
+            <figcaption>The solar spectrum: every dark line is the absorption fingerprint of an element (D: sodium, C: hydrogen Hα, F: Hβ).<span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Fraunhofer_lines.svg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption>
+          </figure>
+          <span class="app-ic" aria-hidden="true">✦</span>
+          <h4 class="app-title">Astronomy</h4>
+          <p>For most celestial objects, light is almost the only “messenger” that brings information to Earth. Each dark line in a star's spectrum is the trace of an element in its outer gas; counting the lines and measuring their strength reveals what the star is made of and how hot it is.</p>
+          <p>In 1868, while observing the solar corona during an eclipse, astronomers saw a yellow line at 587.6 nm that matched no known element. The new element was named <b>helium</b> (from the Greek <i>helios</i>, the Sun), and it was found on Earth only 27 years later.</p>
+          <p>When a light source moves, its whole set of lines shifts slightly (the Doppler effect): towards red if it is receding, towards blue if it is approaching. Such tiny shifts led in 1995 to the discovery of the first planet orbiting a Sun-like star.</p>
+          <p class="src">Sources: Fraknoi et al. (2022); Mayor &amp; Queloz (1995)</p>
+        </article>
+
+        <article class="app-card">
+          <figure class="app-fig">
+            <div class="app-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fireworks_2.jpg?width=800" alt="Fireworks in the night sky" loading="lazy" referrerpolicy="no-referrer"></div>
+            <figcaption>Every burst of light is emission from metal atoms and molecules heated in the flame.<span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Fireworks_2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption>
+          </figure>
+          <span class="app-ic" aria-hidden="true">✺</span>
+          <h4 class="app-title">Fireworks</h4>
+          <p>Each firework colour is a giant flame test. Strontium salts give red, barium green, copper blue and sodium yellow; mixing strontium with copper produces purple.</p>
+          <p>Interestingly, most of that light does not come from lone metal atoms but from <b>small molecules</b> formed in the flame, such as SrCl, SrOH, BaCl and CuCl. That is why firework makers often add a chlorine-rich ingredient to help these molecules form.</p>
+          <p>Blue is the hardest colour: the CuCl molecule breaks apart if the flame is too hot, so a good blue firework has to burn at a “just right” temperature.</p>
+          <p class="src">Sources: Conkling &amp; Mocella (2011); Steinhauser &amp; Klapötke (2008)</p>
+        </article>
+
+        <article class="app-card">
+          <figure class="app-fig duo">
+            <div class="app-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flametest--Na.swn.jpg?width=800" alt="Sodium flame test giving yellow-orange light" loading="lazy" referrerpolicy="no-referrer"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flametest--Cu.swn.jpg?width=800" alt="Copper flame test giving blue-green light" loading="lazy" referrerpolicy="no-referrer"></div>
+            <figcaption>Flame tests: sodium (left) burns yellow-orange, copper (right) blue-green.<span class="credit">Images: Wikimedia Commons (<a href="https://commons.wikimedia.org/wiki/File:Flametest--Na.swn.jpg" target="_blank" rel="noopener">1</a>, <a href="https://commons.wikimedia.org/wiki/File:Flametest--Cu.swn.jpg" target="_blank" rel="noopener">2</a>)</span></figcaption>
+          </figure>
+          <span class="app-ic" aria-hidden="true">⚗</span>
+          <h4 class="app-title">Chemical analysis</h4>
+          <p>In 1860, passing the light of a mineral-water flame through a spectroscope, Bunsen and Kirchhoff saw two unfamiliar blue lines. They belonged to an unknown element: <b>caesium</b> (Latin <i>caesius</i>, sky blue). The following year they discovered <b>rubidium</b> through its dark red lines.</p>
+          <p>Today <b>ICP-OES</b> instruments use an argon plasma at about 6000–10000 K to excite a sample and measure the emission lines of dozens of elements at once. They can detect heavy metals at parts-per-billion levels, so they are used to check drinking water, soil and food.</p>
+          <p class="src">Sources: Kirchhoff &amp; Bunsen (1860); Flowers et al. (2019)</p>
+        </article>
+
+        <article class="app-card">
+          <figure class="app-fig">
+            <div class="app-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/LPS_Lamp_35W_running.jpg?width=800" alt="A glowing low-pressure sodium lamp" loading="lazy" referrerpolicy="no-referrer"></div>
+            <figcaption>A low-pressure sodium lamp: almost all of its light is in the 589 nm doublet.<span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:LPS_Lamp_35W_running.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span></figcaption>
+          </figure>
+          <span class="app-ic" aria-hidden="true">◉</span>
+          <h4 class="app-title">Lighting</h4>
+          <p><b>Low-pressure sodium</b> street lamps emit almost nothing but the yellow 589 nm doublet. They are among the most energy-efficient lamps, but under that single colour everything looks yellow or grey: you cannot tell a red car from a blue one.</p>
+          <p>In a <b>fluorescent lamp</b>, mercury vapour emits most strongly at 253.7 nm, in the invisible ultraviolet. A phosphor coating inside the tube absorbs that UV and re-emits visible light in a few blue, green and red regions that together look almost white. Neon lamps use neon gas, which gives a characteristic red-orange glow.</p>
+          <p class="src">Sources: NIST ASD; Ling et al. (2016)</p>
+        </article>
+      </div>
+
+      <h3 id="refs-h">References</h3>
+      <div id="ref-list"></div>
+      <p class="muted small">Note: the animations are simplified. Wavelengths and energy levels are real data; intensity ratios, speeds and the shape of the aurora are approximate illustrations.</p>
+    </section>
+  </div>
+</dialog>
+
+<!-- ===== Trợ giúp ===== -->
+<dialog class="modal" id="dlg-help" aria-labelledby="help-title">
+  <div class="modal-head"><h2 id="help-title">How to use Aurora-LAB</h2><button type="button" class="icon-btn" data-close aria-label="Close">✕</button></div>
+  <div class="modal-body">
+    <ol class="howto steps-cards">
+      <li><span class="hn">1</span><div><b>Pick a question</b><p>The three tabs Atom, Aurora and Flame are three scientific questions. Start with any of them.</p></div></li>
+      <li><span class="hn">2</span><div><b>Follow steps 1 → 2 → 3</b><p>The control panel is on the right; on a phone, drag it up from the bottom.</p></div></li>
+      <li><span class="hn">3</span><div><b>Observe and explain it yourself</b><p>Watch the scene and the <b>380–780 nm spectrum bar</b> at the bottom, then open “Why…?” to compare with your own idea.</p></div></li>
+    </ol>
+    <h3>Basic and Full modes</h3>
+    <p><b>Basic</b> keeps the screen uncluttered with only the main controls. <b>Full</b> adds energy values, transition tables, emission-versus-altitude plots and reference lines on the spectrum bar, for when you want to dig deeper.</p>
+    <h3>Links between experiments</h3>
+    <p>The selected element and spectral line carry over between experiments. For example, pick the green band in the Aurora experiment, switch to the Atom experiment, and oxygen's 557.7 nm transition is ready for you.</p>
+    <h3>Keyboard shortcuts</h3>
+    <ul class="keys">
+      <li><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> switch experiment</li>
+      <li><kbd>Space</kbd> main action (add energy, insert the spectroscope, change view)</li>
+      <li><kbd>?</kbd> open help · <kbd>Esc</kbd> close window</li>
+    </ul>
+  </div>
+</dialog>
+
+<!-- ===== Giới thiệu ===== -->
+<dialog class="modal modal-about" id="dlg-about" aria-labelledby="about-title">
+  <div class="modal-head"><h2 id="about-title">About Aurora-LAB</h2><button type="button" class="icon-btn" data-close aria-label="Close">✕</button></div>
+  <div class="modal-body about">
+    <p class="about-lead">Learning science is more than memorising laws, concepts and results that others have discovered. Above all, it is the process of learning to observe the world, ask questions, test hypotheses and find answers for yourself, step by step.</p>
+    <p><b>Aurora-LAB</b> is built on that idea of education: it turns phenomena that are hard to observe, processes at atomic scales or across vast regions of space, into visual experiences that learners can actively explore.</p>
+    <p>It is a virtual laboratory on atomic light and the aurora, developed by the <b>STEM &amp; Experiential Learning in Astronomy Research Group – USAC Astronomy Club</b>. Through interactive simulations, learners can change the energy of an electron, explore how particles interact with the atmosphere, observe the light given off by heated elements and see how spectra are formed.</p>
+    <blockquote class="about-quote">Instead of only receiving a ready-made conclusion, you take part in the process that leads to it.</blockquote>
+
+    <h3>From observation to understanding</h3>
+    <p>Aurora-LAB focuses on three closely connected topics, all opening up one of the most important ways humanity studies the universe: the study of light.</p>
+    <div class="about-cards">
+      <div class="about-card"><span class="ac-n">1</span><b>Photon emission by atoms</b><p>What happens when an electron absorbs energy and moves to a higher level? Why, on returning to a lower level, does the atom emit photons of precise energies, creating characteristic spectral lines?</p></div>
+      <div class="about-card"><span class="ac-n">2</span><b>The aurora and the glowing atmosphere</b><p>How do charged particles, energised by the solar wind, interact with atoms and molecules in the atmosphere? Why do altitude and atmospheric composition produce the different colours of the aurora?</p></div>
+      <div class="about-card"><span class="ac-n">3</span><b>From flame to spectrum</b><p>What can the light of heated elements reveal about the composition of matter? How can a bright line in a spectrum become the signature that identifies an element?</p></div>
+    </div>
+    <p>All three point to one basic principle: <b>light carries information about the matter that emitted it or interacted with it.</b> Every element has its own set of energy levels and its own spectral signature. By studying these signatures, scientists can determine the chemical composition, temperature and many physical properties of objects thousands or even millions of light-years away.</p>
+    <p>From a small experiment with light in a classroom, learners can reach a research method that has opened the door to understanding stars, nebulae and distant galaxies.</p>
+
+    <h3>The educational philosophy behind Aurora-LAB</h3>
+    <p>We believe a meaningful science learning experience lies not only in how much knowledge learners receive, but also in the questions it raises and the ability to explore on their own that it builds.</p>
+    <p>Aurora-LAB follows a few guiding principles:</p>
+    <ul class="about-list">
+      <li><span aria-hidden="true">🔍</span><div><b>Learning by exploring:</b> Learners do not just watch results; they change the conditions of an experiment, follow what changes and work out the link between cause and effect.</div></li>
+      <li><span aria-hidden="true">👁</span><div><b>Making the invisible visible:</b> Atomic processes, radiation the eye cannot see and events hundreds of kilometres up in the atmosphere are recreated in simulation, making abstract ideas more approachable.</div></li>
+      <li><span aria-hidden="true">🔗</span><div><b>Connecting theory and experiment:</b> Physical concepts do not live apart in textbooks; they are placed in concrete situations to observe and test, so learners can link model, phenomenon and scientific explanation.</div></li>
+      <li><span aria-hidden="true">📐</span><div><b>Scientific accuracy as the foundation:</b> Spectral data follow the <b>NIST Atomic Spectra Database</b>; auroral physics is checked against peer-reviewed work and material from the <b>NOAA Space Weather Prediction Center (SWPC)</b>. The content is written to be easy to follow while respecting the science (see <button type="button" class="link-btn inline" data-goref>References</button>).</div></li>
+      <li><span aria-hidden="true">🌏</span><div><b>Widening access to science:</b> Not every school has full spectroscopy equipment. By building a web-based simulation environment, Aurora-LAB hopes to lower barriers of equipment and conditions, giving school pupils, university students, teachers and astronomy enthusiasts more chances to explore.</div></li>
+    </ul>
+
+    <h3>Science begins with curiosity</h3>
+    <p>Aurora-LAB does not aim to replace real experiments or the role of teachers. Instead, it hopes to be a supporting environment where learners can freely observe, experiment and form questions of their own.</p>
+    <p>For understanding a phenomenon is not only knowing how it happens, but also why it happens and how we can test that explanation.</p>
+    <p>Aurora-LAB is part of the educational ecosystem of the <b>USAC Astronomy Club – University of Science, VNU-HCM</b>, developed with the same aim: bringing scientific knowledge closer to the community while sparking a spirit of inquiry and scientific thinking in everyone.</p>
+
+    <div class="contact">
+      <p class="contact-h">USAC Astronomy Club – Bringing astronomy to the community.</p>
+      <p>Please send feedback and suggestions for improving Aurora-LAB to:</p>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:clb.usac@gmail.com">clb.usac@gmail.com</a></li>
+        <li>Facebook page: <a href="https://www.facebook.com/clbusac" target="_blank" rel="noopener">USAC Astronomy Club</a></li>
+        <li>Website: <a href="https://web.clbtvusac.com/" target="_blank" rel="noopener">web.clbtvusac.com</a></li>
+      </ul>
+    </div>
+  </div>
+</dialog>
+
+<!-- ===== Tài trợ ===== -->
+<dialog class="modal modal-donate" id="dlg-donate" aria-labelledby="donate-title">
+  <div class="modal-head"><h2 id="donate-title">Sponsor or support Aurora-LAB</h2><button type="button" class="icon-btn" data-close aria-label="Close">✕</button></div>
+  <div class="modal-body">
+    <p>Aurora-LAB is free and will stay open to every learner. If you find it useful, you can support its domain upkeep and further development.</p>
+    <div class="warn"><b>Please note:</b> donations go to the <b>project maintainer’s personal account</b>, not to the funds of the USAC Astronomy Club. Donating is entirely voluntary and comes with no benefits or services.</div>
+    <img class="donate-qr" src="../docs/donate/vietqr.png" alt="Techcombank VietQR code to support the project" width="260">
+    <p class="muted donate-note">The VietQR code works with Vietnamese banking apps. Check the recipient’s name before sending. From outside Vietnam, please contact us below for transfer details.</p>
+    <h3>Partnerships and sponsorship</h3>
+    <p>Organisations that would like to sponsor or partner with the project, including from outside Vietnam, please contact:</p>
+    <ul class="facts">
+      <li>Project maintainer: <a href="mailto:minhvo.091003.nckh@gmail.com">minhvo.091003.nckh@gmail.com</a> · <a href="https://www.facebook.com/minhtalichemistryhcmus" target="_blank" rel="noopener">Facebook</a></li>
+      <li>USAC Astronomy Club: <a href="mailto:clb.usac@gmail.com">clb.usac@gmail.com</a> · <a href="https://www.facebook.com/clbusac" target="_blank" rel="noopener">Facebook page</a></li>
+    </ul>
+  </div>
+</dialog>
+
+<!-- ===== Kiểm tra nhanh ===== -->
+<dialog class="modal" id="dlg-quiz" aria-labelledby="quiz-title">
+  <div class="modal-head"><h2 id="quiz-title">Quick quiz</h2><button type="button" class="icon-btn" data-close aria-label="Close">✕</button></div>
+  <div class="modal-body" id="quiz-body"></div>
+</dialog>
+
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }</script>
+<script src="js/data.js"></script>
+<script src="js/core.js"></script>
+<script src="js/spectrum.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/sim-atom.js"></script>
+<script src="js/sim-aurora.js"></script>
+<script src="js/sim-flame.js"></script>
+<script src="js/codex-deep.js"></script>
+<script src="js/codex.js"></script>
+<script src="js/app.js"></script>
+<script src="js/buddy.js"></script>
+<script type="module" src="js/mascot3d.js"></script>
+</body>
+</html>

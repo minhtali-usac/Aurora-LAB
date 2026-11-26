@@ -1034,3 +1034,14 @@ body::before {
 /* Khung 3D Mặt Trời: chú thích lên trên, hướng dẫn ở dưới, không chồng chữ */
 .se3d-legend { top: 50px; bottom: auto; flex-direction: column; gap: 4px; padding: 7px 10px; border-radius: 10px; background: rgba(8, 12, 22, 0.6); max-width: 190px; }
 .se3d-hint { right: 10px; padding: 6px 10px; border-radius: 10px; background: rgba(8, 12, 22, 0.6); }
+
+/* Logo nhóm STELLAR, nút ngôn ngữ, tài trợ */
+.brand-logo-group { margin-left: -4px; }
+.lang-btn { text-decoration: none; font: 700 12.5px var(--f-display); letter-spacing: 0.06em; border-color: var(--line-2); background: var(--surface); justify-content: center; min-width: 40px; }
+.ftr-donate { border: 0; background: none; padding: 0; font: inherit; color: var(--brand-hi); cursor: pointer; }
+.ftr-donate:hover { text-decoration: underline; }
+.modal-donate { width: min(520px, calc(100vw - 32px)); }
+.donate-qr { display: block; width: min(260px, 100%); height: auto; margin: 10px auto 6px; border-radius: 14px; }
+.donate-note { text-align: center; font-size: 13px; }
+@media (max-width: 560px) { .brand-logo-group { margin-left: -10px; } .lang-btn { min-width: 34px; padding: 0 6px; } }
+@media (max-width: 480px) { .brand-text { display: none; } }
